@@ -127,9 +127,9 @@ function rgbFromHSL(h, s, l) {
    * Another great resource (and one which inspired the re-derivation): https://gist.github.com/mjackson/5311256
    * And this query on Stackexchange https://cs.stackexchange.com/questions/64549/convert-hsv-to-rgb-colors
    */
-
-  const c = (1 - Math.abs(2 * l - 1)) * s;
-  const x = c * (1 - Math.abs(((h / 6) % 2) - 1)); 
+  const hprime = h / 60;
+  const c = (1 - Math.abs((2 * l) - 1)) * s;
+  const x = c * (1 - Math.abs((hprime % 2) - 1)); 
   const m = l - (c / 2);
   let rPrime, gPrime, bPrime;
   if (h >= 0 && h < 60) { rPrime = c; gPrime = x; bPrime = 0}
@@ -197,8 +197,8 @@ function rgbFromHex(hexValue) {
    * O: An array of red (r), green (g), blue (b), all ∈ [0, 255]
    */
   const r = baseHexToTen(hexValue.slice(0, 2))
-  const g = baseHexToTen(hexValue.slice(3, 5))
-  const b = baseHexToTen(hexValue.slice(5, 7))
+  const g = baseHexToTen(hexValue.slice(2, 4))
+  const b = baseHexToTen(hexValue.slice(4, 6))
 
   return [r, g, b]
 }

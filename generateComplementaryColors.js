@@ -238,4 +238,4 @@ function generateComplementaryColors ( numberToGenerate, saturation, lightness) 
   return hues;
 }
 
-export { hsvFromRGB, rgbFromHSV, hslFromRGB, rgbFromHSL, baseTenToHex, baseHexToTen, hexFromRGB, rgbFromHex, generateComplementaryColors };
+module.exports = { hsvFromRGB, rgbFromHSV, hslFromRGB, rgbFromHSL, baseTenToHex, baseHexToTen, hexFromRGB, rgbFromHex, generateComplementaryColors };

@@ -53,18 +53,18 @@ function rgbFromHSV(h, s, v) {
    * And this query on Stackexchange https://cs.stackexchange.com/questions/64549/convert-hsv-to-rgb-colors
    */
 
-  hprime = h / 60;
+  const hPrime = h / 60;
   const c = v * s;
-  const x = c * (1 - Math.abs(hprime % 2 - 1)); 
+  const x = c * (1 - Math.abs(hPrime % 2 - 1)); 
   const m = v - c;
   let rPrime, gPrime, bPrime;
-  if (!hprime) {rPrime = 0; gPrime = 0; bPrime = 0; }
-  if (hprime >= 0 && hprime < 1) { rPrime = c; gPrime = x; bPrime = 0}
-  if (hprime >= 1 && hprime < 2) { rPrime = x; gPrime = c; bPrime = 0}
-  if (hprime >= 2 && hprime < 3) { rPrime = 0; gPrime = c; bPrime = x}
-  if (hprime >= 3 && hprime < 4) { rPrime = 0; gPrime = x; bPrime = c}
-  if (hprime >= 4 && hprime < 5) { rPrime = x; gPrime = 0; bPrime = c}
-  if (hprime >= 5 && hprime < 6) { rPrime = c; gPrime = 0; bPrime = x}
+  if (!hPrime) {rPrime = 0; gPrime = 0; bPrime = 0; }
+  if (hPrime >= 0 && hPrime < 1) { rPrime = c; gPrime = x; bPrime = 0}
+  if (hPrime >= 1 && hPrime < 2) { rPrime = x; gPrime = c; bPrime = 0}
+  if (hPrime >= 2 && hPrime < 3) { rPrime = 0; gPrime = c; bPrime = x}
+  if (hPrime >= 3 && hPrime < 4) { rPrime = 0; gPrime = x; bPrime = c}
+  if (hPrime >= 4 && hPrime < 5) { rPrime = x; gPrime = 0; bPrime = c}
+  if (hPrime >= 5 && hPrime < 6) { rPrime = c; gPrime = 0; bPrime = x}
   
   const r = Math.round( (rPrime + m)* 255);
   const g = Math.round( (gPrime + m)* 255);
@@ -127,9 +127,9 @@ function rgbFromHSL(h, s, l) {
    * Another great resource (and one which inspired the re-derivation): https://gist.github.com/mjackson/5311256
    * And this query on Stackexchange https://cs.stackexchange.com/questions/64549/convert-hsv-to-rgb-colors
    */
-  const hprime = h / 60;
+  const hPrime = h / 60;
   const c = (1 - Math.abs((2 * l) - 1)) * s;
-  const x = c * (1 - Math.abs((hprime % 2) - 1)); 
+  const x = c * (1 - Math.abs((hPrime % 2) - 1)); 
   const m = l - (c / 2);
   let rPrime, gPrime, bPrime;
   if (h >= 0 && h < 60) { rPrime = c; gPrime = x; bPrime = 0}

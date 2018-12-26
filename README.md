@@ -1,6 +1,5 @@
-[![](https://img.shields.io/npm/v/npm.svg)]([![](https://img.shields.io/github/manifest-json/v/:user/:repo.svg)](https://github.com/stephencweiss/generate-complementary-colors))
-[![](https://img.shields.io/github/manifest-json/v/:user/:repo.svg)](https://github.com/stephencweiss/generate-complementary-colors)
 [![](https://img.shields.io/github/languages/code-size/badges/shields.svg)]([![](https://img.shields.io/npm/v/npm.svg)]([![](https://img.shields.io/github/manifest-json/v/:user/:repo.svg)](https://github.com/stephencweiss/generate-complementary-colors)))
+[![](https://img.shields.io/npm/v/npm.svg)]([![](https://img.shields.io/github/manifest-json/v/:user/:repo.svg)](https://github.com/stephencweiss/generate-complementary-colors))
 
 
 # Generate Complementary Colors & Convert Color Types
